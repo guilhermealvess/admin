@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: admin
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+    url: jdbc:postgresql://localhost:5432/db
+    username: user
+    password: password
+flyway:
+  datasources:
+    default:
+      enabled: true
+    schema-generate: CREATE_DROP
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
